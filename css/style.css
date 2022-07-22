@@ -1,0 +1,163 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: none;
+font-style: normal;
+text-align: left;
+zoom: 1;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+table {
+border-collapse: collapse;
+font-family: inherit;
+}
+h1,h2,h3,h4,h5 {
+font-size: 100%;
+font-weight: normal;
+line-height: 1;
+}
+input,textarea,select {
+font-family: inherit;
+font-size: 16px;
+}
+input[type="button"],input[type="text"],input[type="submit"] {
+-webkit-appearance: none;
+border-radius: 0;
+}
+textarea {
+resize: none;
+-webkit-appearance: none;
+border-radius: 0;
+}
+th,td {
+border-collapse: collapse;
+}
+table th,table td {
+white-space: nowrap;
+}
+ul,ol {
+list-style-type: none;
+}
+img {
+vertical-align: text-bottom;
+vertical-align: -webkit-baseline-middle;
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
+.top_img img{
+    width: 100%;
+    object-fit: cover;
+}
+.top_img {
+    width: 100%;
+    height: 70vh;
+}
+.posi{
+    position: relative;
+}
+.rink {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+}
+.com{
+    font-size: 100px;
+    font-family:'Hannotate SC',sans-serif;
+    color: aliceblue;
+    padding: 50px 0 50px 100px;
+}
+.game_menu{
+    font-family:'Hannotate SC',sans-serif;
+}
+.game_menu li{
+    padding: 5px;
+    font-size: 50px;
+    position: relative;
+    
+}
+
+.game_menu a{
+    padding: 30px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.btn{
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+    overflow: hidden;
+    /*ボタンの形状*/
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/   
+    transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+position: relative;
+z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+color:aliceblue;
+}
+
+.btn:hover span{
+    color:#f2553c;
+}
+
+.bgcenterout:before {
+    content: '';
+        /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+        /*色や形状*/
+    background: aliceblue;
+    width: 100%;
+    height: 100%;
+        /*アニメーション*/
+    transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 0);
+    transform-origin:center;
+}
+.bgcenterout:hover:before{
+    transform:scale(1, 1);
+}
+.res1{
+    display: none;
+}
+.a1{
+    display: flex;
+    justify-content: space-around;
+}
+.to{
+    
+    text-align: center;
+    
+}
+.to a{
+    width: 70%;
+    font-size: 30px;
+    object-fit: cover;
+    font-family:'Hannotate SC',sans-serif;
+}
